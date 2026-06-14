@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>William Samwaka — Portfolio</title>
+<meta name="description" content="William Samwaka — Computer Science student, web developer and game developer based in Lusaka, Zambia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" class="icon-fill"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.359-1.088.653-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="13" r="1"/><circle cx="18" cy="11" r="1"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5Z"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 8 4 4-4 4"/><path d="M12 16h6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">William-Samwaka<span>.</span>dev</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#education" data-nav>Education</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon sun"><use href="#i-sun"/></svg>
+        <svg class="icon moon"><use href="#i-moon"/></svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <svg class="icon menu"><use href="#i-menu"/></svg>
+        <svg class="icon x"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div data-reveal>
+      <div class="eyebrow">portfolio / lusaka, zambia</div>
+      <h1>William <span class="grad">Samwaka</span></h1>
+      <div class="role">Computer Science Student — Web Developer — Game Developer</div>
+      <p class="lead">
+        I'm a third-year Computer Science student at the National Institute of Public Administration,
+        building things from the ground up — web applications, 2D games, and even programming
+        language interpreters. I learn best by shipping projects, not just reading about them.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <svg class="icon"><use href="#i-code"/></svg> View projects
+        </a>
+        <a href="#contact" class="btn">
+          <svg class="icon"><use href="#i-mail"/></svg> Get in touch
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a class="social-link" href="https://github.com/william-samwakajr" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon icon-fill"><use href="#i-github"/></svg>
+        </a>
+        <a class="social-link" href="mailto:williamsamwaka05@gmail.com" aria-label="Email">
+          <svg class="icon"><use href="#i-mail"/></svg>
+        </a>
+        <a class="social-link" href="tel:+260771776311" aria-label="Phone">
+          <svg class="icon"><use href="#i-phone"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div data-reveal>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="title">william@nipa — lox</span>
+        </div>
+        <div class="terminal-body" id="term-body" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" role="presentation" aria-hidden="true">
+  <div class="marquee-track">
+    <span>C<span></span> C++<span></span> JAVA<span></span> JAVASCRIPT<span></span> PHP<span></span> LARAVEL<span></span> NODE.JS<span></span> RAYLIB<span></span> OPENGL<span></span> WEBASSEMBLY<span></span> GIT<span></span> LINUX</span>
+    <span>C<span></span> C++<span></span> JAVA<span></span> JAVASCRIPT<span></span> PHP<span></span> LARAVEL<span></span> NODE.JS<span></span> RAYLIB<span></span> OPENGL<span></span> WEBASSEMBLY<span></span> GIT<span></span> LINUX</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="eyebrow">// about</div>
+    <h2 class="section-title">A bit about how I work</h2>
+    <div class="about-grid">
+      <div data-reveal>
+        <p>
+          I'm currently in my third year of a <strong>BSc in Computer Science</strong> at the
+          National Institute of Public Administration in Lusaka, expecting to graduate in
+          <strong>September 2028</strong>. My coursework covers data structures and algorithms,
+          operating systems, computer architecture, database systems, software engineering
+          and computer networks.
+        </p>
+        <p>
+          Outside of class, I split my time between three things: <strong>web development</strong>
+          with Laravel and Node, <strong>game development</strong> with Raylib and OpenGL, and
+          <strong>systems programming</strong> in C — most recently writing a Java interpreter
+          for the Lox language. I'm drawn to projects where I can see exactly how something
+          works under the hood.
+        </p>
+        <div class="interest-tags">
+          <span class="pill">AI / ML</span>
+          <span class="pill">Game Dev</span>
+          <span class="pill">Web Tech</span>
+          <span class="pill">Systems Programming</span>
+          <span class="pill">Open Source</span>
+        </div>
+      </div>
+      <div data-reveal class="lang-card">
+        <h4>Languages I speak</h4>
+        <div class="lang-row"><span>English</span><span class="level">Fluent</span></div>
+        <div class="lang-row"><span>Nyanja</span><span class="level">Native</span></div>
+        <h4 style="margin-top:1.4rem;">Based in</h4>
+        <div class="lang-row" style="border-bottom:none;">
+          <span style="display:flex;align-items:center;gap:0.5rem;">
+            <svg class="icon"><use href="#i-pin"/></svg> Lusaka, Zambia
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" style="background:var(--surface-alt);">
+  <div class="container">
+    <div class="eyebrow">// skills</div>
+    <h2 class="section-title">Tools I reach for</h2>
+    <p class="section-lead">A mix of languages and frameworks for the web, for games, and for working close to the system.</p>
+    <div class="skills-grid">
+      <div class="skill-card" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-code"/></svg></div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="pill">C</span><span class="pill">C++</span><span class="pill">Java</span>
+          <span class="pill">JavaScript</span><span class="pill">PHP</span><span class="pill">C#</span>
+        </div>
+      </div>
+      <div class="skill-card" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-layout"/></svg></div>
+        <h3>Web Development</h3>
+        <div class="skill-tags">
+          <span class="pill">Node.js</span><span class="pill">Laravel</span><span class="pill">MySQL</span>
+          <span class="pill">Express</span><span class="pill">RESTful APIs</span><span class="pill">SQLite</span>
+          <span class="pill">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-card" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-gamepad"/></svg></div>
+        <h3>Game Development</h3>
+        <div class="skill-tags">
+          <span class="pill">Raylib</span><span class="pill">SDL</span><span class="pill">OpenGL</span>
+          <span class="pill">WebAssembly</span><span class="pill">Emscripten</span>
+        </div>
+      </div>
+      <div class="skill-card" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-tool"/></svg></div>
+        <h3>Tools</h3>
+        <div class="skill-tags">
+          <span class="pill">Git</span><span class="pill">Linux</span><span class="pill">VS Code</span><span class="pill">GCC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="container">
+    <div class="eyebrow">// projects</div>
+    <h2 class="section-title">Things I've built</h2>
+    <p class="section-lead">A few projects spanning games, interpreters, and full-stack apps — some finished, some in progress, some on pause.</p>
+
+    <div class="projects-grid">
+
+      <!-- Meow-Catch -->
+      <div class="project-card" data-reveal>
+        <div class="project-top">
+          <div>
+            <h3>Meow-Catch Game</h3>
+            <div class="project-period">December — Present</div>
+          </div>
+          <span class="status active">In progress</span>
+        </div>
+        <ul>
+          <li>An interactive 2D arcade game with real-time collision detection running at 60 FPS.</li>
+          <li>Built a game-state management system with dynamic enemy spawning.</li>
+          <li>Compiled to the web with Emscripten and WebAssembly for in-browser play.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="pill">C</span><span class="pill">Raylib</span><span class="pill">WebAssembly</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr/Meow-catch" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> Repository
+          </a>
+        </div>
+      </div>
+
+      <!-- Lox -->
+      <div class="project-card" data-reveal>
+        <div class="project-top">
+          <div>
+            <h3>Lox Language Interpreter</h3>
+            <div class="project-period">In development</div>
+          </div>
+          <span class="status active">In progress</span>
+        </div>
+        <ul>
+          <li>A tree-walking interpreter for Lox, a small dynamically-typed scripting language, written in Java.</li>
+          <li>Hand-written scanner and recursive-descent parser that produce an abstract syntax tree.</li>
+          <li>Supports variables, control flow, functions, closures, classes and inheritance.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="pill">Java</span><span class="pill">Interpreters</span><span class="pill">AST</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> GitHub profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Management System -->
+      <div class="project-card" data-reveal>
+        <div class="project-top">
+          <div>
+            <h3>Project Management System</h3>
+            <div class="project-period">October</div>
+          </div>
+          <span class="status halted">Halted</span>
+        </div>
+        <ul>
+          <li>A full-stack app built around a RESTful API architecture.</li>
+          <li>JWT authentication with bcrypt password hashing for secure sessions.</li>
+          <li>Responsive interface built with React and CSS3.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">MySQL</span><span class="pill">React</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr/teamopro" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> Backend
+          </a>
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr/teamopro-frontend" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> Frontend
+          </a>
+        </div>
+      </div>
+
+      <!-- Terminal text editor -->
+      <div class="project-card" data-reveal>
+        <div class="project-top">
+          <div>
+            <h3>Terminal-Based Text Editor</h3>
+            <div class="project-period">August</div>
+          </div>
+          <span class="status halted">Halted</span>
+        </div>
+        <ul>
+          <li>Low-level terminal manipulation and raw-mode input handling, written in C.</li>
+          <li>Built to get hands-on with operating system concepts and systems programming.</li>
+          <li>Focused on tight performance with measurable optimization gains.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="pill">C</span><span class="pill">Linux</span><span class="pill">Systems Programming</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr/Thoughts" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> Repository
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" style="background:var(--surface-alt);">
+  <div class="container">
+    <div class="eyebrow">// education</div>
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-reveal>
+        <div class="when">Expected Graduation: September 2028</div>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <div class="where">National Institute of Public Administration, Lusaka, Zambia</div>
+        <p>Relevant coursework:</p>
+        <div class="coursework">
+          <span class="pill">Data Structures &amp; Algorithms</span>
+          <span class="pill">Operating Systems</span>
+          <span class="pill">Computer Architecture</span>
+          <span class="pill">Database Systems</span>
+          <span class="pill">Software Engineering</span>
+          <span class="pill">Computer Networks</span>
+        </div>
+      </div>
+      <div class="timeline-item" data-reveal>
+        <div class="when">2022</div>
+        <h3>Grade 12 Certificate</h3>
+        <div class="where">Arakan Boys Secondary School, Lusaka, Zambia</div>
+        <p>14 points — Physics, Mathematics, English</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="eyebrow">// contact</div>
+    <h2 class="section-title">Let's build something</h2>
+    <p class="section-lead">
+      I'm open to internships, collaborations, and interesting problems — in web development,
+      game development, or anything that involves building something from scratch.
+    </p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:williamsamwaka05@gmail.com" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-mail"/></svg></div>
+        <div class="label">Email</div>
+        <div class="value">williamsamwaka05@gmail.com</div>
+      </a>
+      <a class="contact-card" href="tel:+260771776311" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
+        <div class="label">Phone</div>
+        <div class="value">+260 77 1776311</div>
+      </a>
+      <a class="contact-card" href="https://github.com/william-samwakajr" target="_blank" rel="noopener" data-reveal>
+        <div class="skill-icon"><svg class="icon icon-fill"><use href="#i-github"/></svg></div>
+        <div class="label">GitHub</div>
+        <div class="value">github.com/william-samwakajr</div>
+      </a>
+      <div class="contact-card" data-reveal>
+        <div class="skill-icon"><svg class="icon"><use href="#i-pin"/></svg></div>
+        <div class="label">Location</div>
+        <div class="value">Lusaka, Zambia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>&copy; <span id="year"></span> William Samwaka</div>
+    <div>Built with HTML, CSS &amp; & JavaScript (with love :*).</div>
+  </div>
+</footer>
+
+<script src = "app.js"></script>
+
+</body>
+</html>
