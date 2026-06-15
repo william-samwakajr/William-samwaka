@@ -31,6 +31,9 @@
     <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
     <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 8 4 4-4 4"/><path d="M12 16h6"/></symbol>
     <symbol id="i-arrow-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-live" viewBox="0 0 24 24"><circle cx="12" cy="13" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="13" r="1.6" fill="currentColor"/> <path d="M12 7V3M9 4.5L7.5 2M15 4.5L16.5 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3.5 9.5C2.8 11 2.8 15 3.5 16.5M20.5 9.5C21.2 11 21.2 15 20.5 16.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+</symbol>
+    
   </defs>
 </svg>
 
@@ -210,6 +213,32 @@
 
     <div class="projects-grid">
 
+      <div class="project-card" data-reveal>
+        <div class="project-top">
+          <div>
+            <h3>Taskmately</h3>
+            <div class="project-period">August</div>
+          </div>
+          <span class="status halted">Halted</span>
+        </div>
+        <ul>
+          <li>A communcal Todo-list where one can post a task to be done and other users can see the task.</li>
+          <li>Built to get hands-on with PHP laravel, MVC appilcatication architecture approach  ORM using eloquent.</li>
+          <li>Focused on CRUD functionality in full-stack development.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="pill">PHP Laravel</span><span class="pill">Tailwind</span><span class="pill">Web development</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-sm" href="https://github.com/william-samwakajr/Thoughts" target="_blank" rel="noopener">
+            <svg class="icon icon-fill"><use href="#i-github"/></svg> Repository
+          </a>
+         <a class="btn btn-sm" href="https://thoughts-sio9.onrender.com/" target="_blank" rel="noopener">
+           <svg class="icon icon-fill"><use href="#i-live"/></svg> Live site
+          </a> 
+        </div>
+      </div>
+
       <!-- Meow-Catch -->
       <div class="project-card" data-reveal>
         <div class="project-top">
@@ -231,6 +260,8 @@
           <a class="btn btn-sm" href="https://github.com/william-samwakajr/Meow-catch" target="_blank" rel="noopener">
             <svg class="icon icon-fill"><use href="#i-github"/></svg> Repository
           </a>
+         <a class="btn btn-sm" href="https://babavlad.itch.io/meowcatch" target="_blank" rel="noopener">
+           <svg class="icon icon-fill"><use href="#i-live"/></svg> Live site
         </div>
       </div>
 
@@ -285,29 +316,7 @@
         </div>
       </div>
 
-      <!-- Terminal text editor -->
-      <div class="project-card" data-reveal>
-        <div class="project-top">
-          <div>
-            <h3>Terminal-Based Text Editor</h3>
-            <div class="project-period">August</div>
-          </div>
-          <span class="status halted">Halted</span>
-        </div>
-        <ul>
-          <li>Low-level terminal manipulation and raw-mode input handling, written in C.</li>
-          <li>Built to get hands-on with operating system concepts and systems programming.</li>
-          <li>Focused on tight performance with measurable optimization gains.</li>
-        </ul>
-        <div class="project-tags">
-          <span class="pill">C</span><span class="pill">Linux</span><span class="pill">Systems Programming</span>
-        </div>
-        <div class="project-links">
-          <a class="btn btn-sm" href="https://github.com/william-samwakajr/Thoughts" target="_blank" rel="noopener">
-            <svg class="icon icon-fill"><use href="#i-github"/></svg> Repository
-          </a>
-        </div>
-      </div>
+     
 
     </div>
   </div>
